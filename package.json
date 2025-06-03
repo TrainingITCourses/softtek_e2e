@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Curso de introducción a Cypress para Softtek",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +26,9 @@
   "homepage": "https://github.com/TrainingITCourses/softtek_e2e#readme",
   "devDependencies": {
     "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "cypress": "^14.4.0",
+    "typescript": "^5.8.3"
   }
 }
