@@ -1,0 +1,28 @@
+{
+  "name": "softtek_e2e",
+  "version": "1.0.0",
+  "description": "Curso de introducción a Cypress para Softtek",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrainingITCourses/softtek_e2e.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Alberto Basalo",
+    "company": "AI code Academy",
+    "website": "https://aicode.academy",
+    "email": "albertobasalo@aicode.academy"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrainingITCourses/softtek_e2e/issues"
+  },
+  "homepage": "https://github.com/TrainingITCourses/softtek_e2e#readme",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
