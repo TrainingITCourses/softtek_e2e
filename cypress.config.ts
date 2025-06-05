@@ -7,7 +7,7 @@ export default defineConfig({
     },
     baseUrl: "http://localhost:4200/",
     defaultCommandTimeout: 1000,
-    viewportHeight: 1080,
-    viewportWidth: 1920,
+    viewportHeight: 768,
+    viewportWidth: 1024,
   },
 });
