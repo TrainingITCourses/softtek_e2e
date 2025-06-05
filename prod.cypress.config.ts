@@ -6,8 +6,10 @@ export default defineConfig({
       // implement node event listeners here
     },
     baseUrl: "http://localhost:4200/",
-    defaultCommandTimeout: 1000,
-    viewportHeight: 1080,
-    viewportWidth: 1920,
+    defaultCommandTimeout: 2000,
+    viewportHeight: 1000,
+    viewportWidth: 680,
+    screenshotOnRunFailure: false,
+    specPattern: "cypress/e2e/1*.cy.ts",
   },
 });

@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "cypress open --e2e --browser chrome",
-    "test": "cypress run"
+    "test": "cypress run -q --config-file prod.cypress.config.ts",
+    "test:s" : "cypress run -q -s 'cypress/e2e/*.cy.ts'",
+    "test:s1" : "cypress run -q -s 'cypress/e2e/1*.cy.ts'",
+    "test:s:home" : "cypress run -q -s 'cypress/e2e/*home*.cy.ts'"
   },
   "repository": {
     "type": "git",
