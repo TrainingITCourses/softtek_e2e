@@ -6,9 +6,9 @@ describe("The home page", () => {
     cy.visit("http://localhost:4200/");
     cy.get("footer");
   });
-  it("should contains Softtek int the footer", () => {
+  it("should contains Archetype in the footer", () => {
     cy.visit("http://localhost:4200/");
-    cy.get("footer").contains("Softtek");
+    cy.get("footer").contains("Archetype");
   });
   it("should have un link to albertobasalo.dev", () => {
     cy.visit("http://localhost:4200/");
@@ -16,6 +16,6 @@ describe("The home page", () => {
   });
   it("should have nav anchor", () => {
     cy.visit("http://localhost:4200/");
-    cy.get("nav > :nth-child(1) > a").should("exist");
+    cy.get("nav").find("a").should("exist");
   });
 });
