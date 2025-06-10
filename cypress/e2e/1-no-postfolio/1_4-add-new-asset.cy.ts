@@ -1,19 +1,25 @@
-// Exercise
+import { BuyAssetPo } from "../../support/buy-asset.po";
 
 /**
- * Given the app home with an empty portfolio
- *  When the add new asset button is clicked
- *   Then should navigate to the asset form page
- *    And should display the asset form
+ * Given the a adding a new asset
+ *   When is valid buy
+ *    Then should not display error
  */
-describe("Given the app home with an empty portfolio", () => {
+describe("Given the a adding a new asset", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.deleteAllPortfolios();
     cy.createPortfolio(1000, "Test Portfolio");
-  });
-  it("should navigate to the asset form page", () => {
     cy.get("a").contains("Add new asset").click();
-    cy.url().should("include", "/assets/buy");
+  });
+  context("When is valid buy", () => {
+    it("should navigate to the asset form page", () => {
+      const buyAssetPo = new BuyAssetPo();
+      buyAssetPo.inputSymbol.clear().type("MSFT");
+      buyAssetPo.inputSymbol.clear().type("10");
+      buyAssetPo.typeUnits(5);
+      buyAssetPo.clickButton();
+      cy.get(buyAssetPo.selectorAppError).should("not.exist");
+    });
   });
 });
