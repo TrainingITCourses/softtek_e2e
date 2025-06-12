@@ -10,6 +10,6 @@ export default defineConfig({
     viewportHeight: 1000,
     viewportWidth: 680,
     screenshotOnRunFailure: false,
-    specPattern: "cypress/e2e/1*.cy.ts",
+    specPattern: "cypress/e2e/**/*.cy.ts",
   },
 });
