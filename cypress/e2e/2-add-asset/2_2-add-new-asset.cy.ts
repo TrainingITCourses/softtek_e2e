@@ -15,9 +15,12 @@ describe("Given the a adding a new asset", () => {
   context("When is valid buy", () => {
     it("should navigate to the asset form page", () => {
       const buyAssetPo = new BuyAssetPo();
-      buyAssetPo.inputSymbol.clear().type("MSFT");
-      buyAssetPo.inputSymbol.clear().type("10");
-      buyAssetPo.typeUnits(5);
+      // buyAssetPo.inputSymbol.clear().type("MSFT");
+      buyAssetPo.selectSymbol("MSFT");
+
+      // buyAssetPo.inputSymbol.clear().type("10");
+
+      buyAssetPo.typeUnits(1);
       buyAssetPo.clickButton();
       cy.get(buyAssetPo.selectorAppError).should("not.exist");
     });
