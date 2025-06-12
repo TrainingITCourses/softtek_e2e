@@ -6,8 +6,11 @@ describe("Given the portfolio home", () => {
         fixture: "portfolio.json",
       });
       cy.visit("");
-      cy.get("article").find("table").as("assetsTable").should("exist");
+      //cy.get("article").find("table").as("assetsTable").should("exist");
+      // cy.get("@assetsTable").find("tbody").find("tr").should("have.length", 2);
+      cy.get("article").find("table").as("assetsTable");
       cy.get("@assetsTable").find("tbody").find("tr").should("have.length", 2);
+      cy.get("@assetsTable").find("tfoot").find("tr").should("have.length", 1);
     });
   });
 });
