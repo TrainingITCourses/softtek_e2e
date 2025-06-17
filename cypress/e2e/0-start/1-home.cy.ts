@@ -13,6 +13,7 @@ describe("The home page", () => {
   });
   it("should have un link to albertobasalo.dev and other navigation links", () => {
     cy.get("[href='https://albertobasalo.dev']");
+    //cy.wait(1000);
     cy.get("nav").find("a");
   });
 });
